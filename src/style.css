@@ -1,3 +1,64 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.li {
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  line-height: 100%;
+  text-align: center;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+a:hover {
+  background-color: yellow;
+}
+
+a.is-active {
+  position: relative; /* Establishes positioning context for ::after */
+}
+
+a.is-active::after {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute; /* Positions relative to the .is-active link */
+  display: block; /* Allows setting width, height */
+  width: 100%; /* Example styling: full width of the link */
+  height: 2px; /* Example styling: a thin line */
+  background-color: blue; /* Example styling: color of the line */
+  bottom: -5px; /* Example positioning: 5px below the link */
+  left: 0; /* Example positioning: aligned to the left edge */
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
 }
